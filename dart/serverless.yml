@@ -1,0 +1,78 @@
+## Welcome to Serverless!
+##
+## This file is the main config file for your service.
+## It's very minimal at this point and uses default values.
+## You can always add more config options for more control.
+## We've included some commented out config examples here.
+## Just uncomment any of them to get that config option.
+##
+## For full config options, check the docs:
+##    docs.serverless.com
+##
+## Happy Coding!
+#service: fitdesk-backend-dart
+#provider:
+#  name: aws
+#  runtime: provided.al2
+#  memorySize: 128
+#  region: eu-central-1
+#  httpApi:
+#    id: fs1fnfv2de
+## you can overwrite defaults here
+##  stage: dev
+
+#package:
+#  individually: true
+#  artifact: build/bootstrap.zip
+
+#plugins:
+#  - serverless-iam-roles-per-function
+
+#  ## - serverless-prune-plugin
+
+#functions:
+#  getUser:
+#    handler: main.getUser
+#    events:
+#      - httpApi:
+#          path: /user/{userID}
+#          method: GET
+#          cors:
+#            origin: "*"
+#            headers:
+#              - Content-Type
+#              - Content-Encoding
+#    iamRoleStatements:
+#      - Effect: Allow
+#        Action:
+#          - dynamodb:Query
+#        Resource:
+#          - "arn:aws:dynamodb:eu-central-1:245991315644:table/FitDesk_Users/index/cognitoUserID-index"
+#      - Effect: Allow
+#        Action:
+#          - dynamodb:GetItem
+#        Resource:
+#          - "arn:aws:dynamodb:eu-central-1:245991315644:table/FitDesk_Subscriptions"
+
+#  patchAccountTypeUser:
+#    handler: main.patchAccountTypeUser
+#    events:
+#      - httpApi:
+#          path: /user/accountType/{userID}
+#          method: PATCH
+#          cors:
+#            origin: "*"
+#            headers:
+#              - Content-Type
+#              - Content-Encoding
+#    iamRoleStatements:
+#      - Effect: Allow
+#        Action:
+#          - dynamodb:Query
+#        Resource:
+#          - "arn:aws:dynamodb:eu-central-1:245991315644:table/FitDesk_Users/index/cognitoUserID-index"
+#      - Effect: Allow
+#        Action:
+#          - dynamodb:UpdateItem
+#        Resource:
+#          - "arn:aws:dynamodb:eu-central-1:245991315644:table/FitDesk_Users"
