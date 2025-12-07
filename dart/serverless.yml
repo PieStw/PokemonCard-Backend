@@ -30,3 +30,16 @@ plugins:
 
   # - serverless-prune-plugin
 
+functions:
+  getUser:
+    handler: main.hello
+    events:
+      - httpApi:
+          path: /hello
+          method: GET
+          cors:
+            origin: "*"
+            headers:
+              - Content-Type
+              - Content-Encoding
+    
