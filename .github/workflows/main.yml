@@ -31,7 +31,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::245991315644:role/Github_Deploy
+          role-to-assume: arn:aws:iam::541372248100:role/Github_Deploy
           aws-region: eu-central-1
 
       - name: Deploy Dart
@@ -62,7 +62,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: arn:aws:iam::245991315644:role/Github_Deploy
+          role-to-assume: arn:aws:iam::541372248100:role/Github_Deploy
           aws-region: eu-central-1
 
       - name: Deploy Typescript
