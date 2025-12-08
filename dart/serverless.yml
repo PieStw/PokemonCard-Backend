@@ -17,7 +17,7 @@ provider:
   memorySize: 128
   region: eu-central-1
   httpApi:
-    id: fs1fnfv2de
+    id: zez8owsqg0
 # you can overwrite defaults here
 #  stage: dev
 
